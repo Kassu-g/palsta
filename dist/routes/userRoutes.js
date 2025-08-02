@@ -10,7 +10,6 @@ const express_validator_1 = require("express-validator");
 const User_1 = __importDefault(require("../models/User"));
 const inputValidation_1 = require("../validators/inputValidation");
 const router = (0, express_1.Router)();
-// POST /api/user/register
 router.post('/register', inputValidation_1.registerValidator, async (req, res, next) => {
     const errors = (0, express_validator_1.validationResult)(req);
     if (!errors.isEmpty()) {
@@ -34,7 +33,6 @@ router.post('/register', inputValidation_1.registerValidator, async (req, res, n
         return next(err);
     }
 });
-// POST /api/user/login
 router.post('/login', inputValidation_1.loginValidator, async (req, res, next) => {
     const errors = (0, express_validator_1.validationResult)(req);
     if (!errors.isEmpty()) {
