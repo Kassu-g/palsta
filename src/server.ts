@@ -1,0 +1,11 @@
+import 'dotenv/config';
+import express from 'express';
+import mongoose from 'mongoose';
+import userRoutes from './routes/userRoutes';
+import topicRoutes from './routes/topicRoutes';
+const app = express();
+app.use(express.json());
+mongoose.connect(process.env.MONGODB_URI!);
+app.use('/api/user', userRoutes);
+app.use('/api', topicRoutes);
+app.listen(3000, () => console.log('Server running on http://localhost:3000'));
