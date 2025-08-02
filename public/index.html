@@ -2,21 +2,27 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Forum</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  <script defer src="js/app.js"></script>
+  <title>Thred it</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    .container { max-width: 960px; margin: 0 auto; }
+  </style>
 </head>
 <body>
-  <nav>
+  <nav class="red">
     <div class="nav-wrapper">
+      <a href="#" class="brand-logo" style="padding-left:1rem">Thred it</a>
       <ul class="right">
         <li>
-          <form id="loginForm" class="row">
+          <form id="loginForm" class="row" style="margin:0; align-items: center;">
             <div class="input-field col">
-              <input id="email" type="text" class="navbar-input" placeholder="Email">
+              <input id="email" type="text" class="navbar-input" placeholder="Email" />
             </div>
             <div class="input-field col">
-              <input id="password" type="password" class="navbar-input" placeholder="Password">
+              <input id="password" type="password" class="navbar-input" placeholder="Password" />
             </div>
             <div class="col">
               <button type="submit" class="btn waves-effect waves-light">Login</button>
@@ -30,11 +36,18 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container" style="padding-top:2rem;">
+    <h4>Posts</h4>
+
     <div id="topicForm"></div>
+>
     <div id="topics"></div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    defer
+  ></script>
+  <script src="js/app.js" defer></script>
 </body>
 </html>
